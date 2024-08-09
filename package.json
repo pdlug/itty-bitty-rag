@@ -6,7 +6,7 @@
     "fix:lint": "eslint --fix src",
     "prettier": "prettier --check .",
     "test": "run-s test:*",
-    "test:check": "tsc --noEmit",
+    "test:check": "tsc --noEmit --skipLibCheck",
     "test:lint": "eslint .",
     "test:prettier": "prettier \"src\" --list-different",
     "ingest": "tsx src/ingest.ts",
@@ -14,26 +14,26 @@
   },
   "type": "module",
   "dependencies": {
-    "openai": "^4.52.7",
-    "vectordb": "^0.5.0",
+    "openai": "^4.55.3",
+    "vectordb": "^0.9.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@eslint/js": "^9.7.0",
-    "@types/node": "^20.14.10",
-    "@typescript-eslint/eslint-plugin": "8.0.0-alpha.34",
-    "@typescript-eslint/parser": "8.0.0-alpha.34",
+    "@eslint/js": "^9.8.0",
+    "@types/node": "^22.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
     "dotenv": "^16.4.5",
-    "eslint": "^9.7.0",
+    "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-functional": "^6.6.3",
-    "eslint-plugin-unicorn": "^54.0.0",
+    "eslint-plugin-functional": "^7.0.1",
+    "eslint-plugin-unicorn": "^55.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
-    "tsx": "^4.16.2",
-    "typescript": "^5.5.3",
-    "typescript-eslint": "8.0.0-alpha.34"
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.1"
   },
-  "packageManager": "pnpm@9.5.0",
+  "packageManager": "pnpm@9.7.0",
   "module": "index.ts"
 }

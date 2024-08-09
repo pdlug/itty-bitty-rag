@@ -5,15 +5,17 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import tseslint from "typescript-eslint";
 
-import typescriptParser from "@typescript-eslint/parser";
-
 export default [
   eslint.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.strict,
   eslintPluginUnicorn.configs["flat/recommended"],
   {
-    ignores: ["typings/*"],
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: { project: true },
+    },
   },
   {
     rules: {
@@ -64,13 +66,6 @@ export default [
           },
         },
       ],
-    },
-  },
-  {
-    files: ["**/*.ts", "**/*.tsx"],
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: { project: "./tsconfig.json" },
     },
   },
 ];

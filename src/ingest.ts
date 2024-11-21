@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-import lancedb from "vectordb";
+import lancedb from "@lancedb/lancedb";
 
 import { embedText } from "./llm.js";
 

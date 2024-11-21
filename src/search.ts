@@ -1,12 +1,13 @@
-import lancedb from "vectordb";
+import lancedb from "@lancedb/lancedb";
 
 import { embedText, runPrompt } from "./llm.js";
 
 async function retrieveRelevantChunks(table: lancedb.Table, query: string) {
   const embeddedQuery = await embedText(query);
-  const results = await table.search(embeddedQuery).execute();
+  const results = await table.vectorSearch(embeddedQuery);
+  const resArray = await results.toArray();
 
-  return results.map((result) => result.text);
+  return resArray.map((result) => result.text);
 }
 
 async function search(table: lancedb.Table, query: string) {

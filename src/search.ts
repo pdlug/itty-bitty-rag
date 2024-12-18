@@ -5,9 +5,9 @@ import { embedText, runPrompt } from "./llm.js";
 async function retrieveRelevantChunks(table: lancedb.Table, query: string) {
   const embeddedQuery = await embedText(query);
   const results = await table.vectorSearch(embeddedQuery);
-  const resArray = await results.toArray();
+  const resultArray = await results.toArray();
 
-  return resArray.map((result) => result.text);
+  return resultArray.map((result) => result.text);
 }
 
 async function search(table: lancedb.Table, query: string) {

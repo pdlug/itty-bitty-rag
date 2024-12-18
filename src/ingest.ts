@@ -21,12 +21,12 @@ function windowedOverlapChunker(
   return chunks;
 }
 
-interface LanceDBRecord {
+type LanceDBRecord = {
   id: string;
   filename: string;
   vector: number[];
   text: string;
-}
+};
 
 const records: LanceDBRecord[] = [];
 

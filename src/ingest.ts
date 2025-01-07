@@ -7,8 +7,8 @@ import { embedText } from "./llm.js";
 
 function windowedOverlapChunker(
   text: string,
-  chunkSize: number = 1024,
-  overlapSize: number = 10,
+  chunkSize = 1024,
+  overlapSize = 10,
 ): string[] {
   const words = text.split(/\s+/);
   const chunks: string[] = [];
@@ -21,12 +21,12 @@ function windowedOverlapChunker(
   return chunks;
 }
 
-type LanceDBRecord = {
+type LanceDBRecord = Readonly<{
   id: string;
   filename: string;
   vector: number[];
   text: string;
-};
+}>;
 
 const records: LanceDBRecord[] = [];
 

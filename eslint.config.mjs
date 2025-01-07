@@ -8,14 +8,21 @@ import tseslint from "typescript-eslint";
 export default [
   eslint.configs.recommended,
   eslintConfigPrettier,
-  ...tseslint.configs.strict,
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   eslintPluginUnicorn.configs["flat/recommended"],
   {
-    files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parser: tseslint.parser,
-      parserOptions: { project: true },
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
+  },
+  {
+    ignores: ["eslint.config.mjs"],
   },
   {
     rules: {

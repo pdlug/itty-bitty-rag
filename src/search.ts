@@ -2,10 +2,13 @@ import lancedb from "@lancedb/lancedb";
 
 import { embedText, runPrompt } from "./llm.js";
 
-async function retrieveRelevantChunks(table: lancedb.Table, query: string) {
+async function retrieveRelevantChunks(
+  table: lancedb.Table,
+  query: string,
+): Promise<string[]> {
   const embeddedQuery = await embedText(query);
-  const results = await table.vectorSearch(embeddedQuery);
-  const resultArray = await results.toArray();
+  const results = table.vectorSearch(embeddedQuery).select(["text"]);
+  const resultArray = (await results.toArray()) as { text: string }[];
 
   return resultArray.map((result) => result.text);
 }

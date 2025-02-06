@@ -15,16 +15,16 @@
   "type": "module",
   "dependencies": {
     "@lancedb/lancedb": "^0.15.0",
-    "openai": "^4.78.1",
+    "openai": "^4.83.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.18.0",
-    "@types/node": "^22.10.6",
-    "@typescript-eslint/eslint-plugin": "^8.20.0",
-    "@typescript-eslint/parser": "^8.20.0",
+    "@eslint/js": "^9.19.0",
+    "@types/node": "^22.13.1",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
     "dotenv": "^16.4.7",
-    "eslint": "^9.18.0",
+    "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-functional": "^8.0.0",
     "eslint-plugin-unicorn": "^56.0.1",
@@ -32,7 +32,7 @@
     "prettier": "^3.4.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.20.0"
+    "typescript-eslint": "^8.23.0"
   },
   "packageManager": "pnpm@9.13.2",
   "module": "index.ts"

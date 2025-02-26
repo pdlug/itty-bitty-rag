@@ -14,25 +14,25 @@
   },
   "type": "module",
   "dependencies": {
-    "@lancedb/lancedb": "^0.15.0",
-    "openai": "^4.83.0",
-    "zod": "^3.24.1"
+    "@lancedb/lancedb": "^0.16.0",
+    "openai": "^4.85.4",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.19.0",
-    "@types/node": "^22.13.1",
-    "@typescript-eslint/eslint-plugin": "^8.23.0",
-    "@typescript-eslint/parser": "^8.23.0",
+    "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.5",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
     "dotenv": "^16.4.7",
-    "eslint": "^9.19.0",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-functional": "^8.0.0",
-    "eslint-plugin-unicorn": "^56.0.1",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-functional": "^9.0.1",
+    "eslint-plugin-unicorn": "^57.0.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.4.2",
-    "tsx": "^4.19.2",
+    "prettier": "^3.5.2",
+    "tsx": "^4.19.3",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.23.0"
+    "typescript-eslint": "^8.25.0"
   },
   "packageManager": "pnpm@9.13.2",
   "module": "index.ts"

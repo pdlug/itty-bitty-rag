@@ -49,7 +49,7 @@ export default [
         },
       ],
       "unicorn/no-process-exit": "off",
-      "unicorn/prevent-abbreviations": [
+      "unicorn/name-replacements": [
         "error",
         {
           allowList: {
